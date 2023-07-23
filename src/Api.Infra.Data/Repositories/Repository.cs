@@ -37,7 +37,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         return item;
     }
 
-    public async Task<T> AtualizarAsync(T item)
+    public async Task<T?> AtualizarAsync(T item)
     {
         try
         {
@@ -96,7 +96,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
         }
     }
 
-    public async Task<T> SelecionarAsync(Guid id)
+    public async Task<T?> SelecionarAsync(Guid id)
     {
         try
         {

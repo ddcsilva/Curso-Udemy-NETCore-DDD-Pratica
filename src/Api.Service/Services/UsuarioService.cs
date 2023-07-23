@@ -13,7 +13,7 @@ public class UsuarioService : IUsuarioService
         _repository = repository;
     }
 
-    public async Task<UsuarioEntity> Obter(Guid id)
+    public async Task<UsuarioEntity?> Obter(Guid id)
     {
         return await _repository.SelecionarAsync(id);
     }
@@ -28,7 +28,7 @@ public class UsuarioService : IUsuarioService
         return await _repository.InserirAsync(usuario);
     }
 
-    public async Task<UsuarioEntity> Atualizar(UsuarioEntity usuario)
+    public async Task<UsuarioEntity?> Atualizar(UsuarioEntity usuario)
     {
         return await _repository.AtualizarAsync(usuario);
     }
